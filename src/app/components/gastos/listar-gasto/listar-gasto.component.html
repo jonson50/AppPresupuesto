@@ -1,0 +1,28 @@
+<h4 class="text-center">Listado de Gastos</h4>
+<hr>
+<div class="row" style="margin-top: 40px;">
+    <div class="col-lg-6">
+        <div class="alert alert-success sizeAlert">
+            Presupuesto: <strong> {{ presupuesto | currency }} </strong>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="alert sizeAlert" [ngClass]="aplicarColorRestante()">
+            Restante: <strong> {{ restante | currency }} </strong>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between" 
+                *ngFor="let gasto of listaGastos; let i = index">
+                <strong class="title2">{{ gasto.descripcion }}</strong>
+                <span>
+                    <span class="badge bg-secondary rounded-pill">{{ gasto.cantidad | currency }} </span>
+                    <i class="fas fa-trash-alt deleteIcon" (click)="eliminarGasto(i)"></i>
+                </span>               
+            </li>
+        </ul>
+    </div>
+</div>

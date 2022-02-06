@@ -1,0 +1,17 @@
+.sizeAlert {
+    font-size: 1.3rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+}
+
+.deleteIcon {
+    color: rgb(185, 110, 110);
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.title2 {
+    text-transform: uppercase;
+}
